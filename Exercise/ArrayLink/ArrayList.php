@@ -1,5 +1,5 @@
 <?php
-
+namespace Arraylist;
 
 use JetBrains\PhpStorm\Pure;
 
@@ -28,7 +28,6 @@ class ArrayList
         } else {
             return false;
         }
-
     }
 
     public function insert($index, $obj): void
@@ -75,11 +74,7 @@ class ArrayList
 
     #[Pure] public function isEmpty(): bool
     {
-        if ($this->size == 0 && $this->size() == 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return empty($this->elements);
     }
 
     public function sort(): array
@@ -92,6 +87,4 @@ class ArrayList
     {
         $this->elements = $this->originalArray;
     }
-
-
 }

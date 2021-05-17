@@ -1,5 +1,5 @@
 <?php
-include_once "ArrayList.php";
+use Arraylist\ArrayList;
 
 $constArray = [1,2,3,4];
 $arraylist = new ArrayList($constArray,8);
